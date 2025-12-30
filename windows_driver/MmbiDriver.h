@@ -1,0 +1,27 @@
+/*++
+
+Module Name:
+
+    MmbiDriver.h
+
+--*/
+
+#include <wdf.h>
+
+typedef struct _DEVICE_CONTEXT {
+    ULONG DeviceID; // 0 for MMBI0, 1 for MMBI1
+} DEVICE_CONTEXT, *PDEVICE_CONTEXT;
+
+WDF_DECLARE_CONTEXT_TYPE_WITH_NAME(DEVICE_CONTEXT, DeviceContext)
+
+EXTERN_C_START
+
+DRIVER_INITIALIZE DriverEntry;
+EVT_WDF_DRIVER_DEVICE_ADD MmbiEvtDeviceAdd;
+EVT_WDF_OBJECT_CONTEXT_CLEANUP MmbiEvtDriverContextCleanup;
+
+EVT_WDF_IO_QUEUE_IO_DEVICE_CONTROL MmbiEvtIoDeviceControl;
+EVT_WDF_IO_QUEUE_IO_READ MmbiEvtIoRead;
+EVT_WDF_IO_QUEUE_IO_WRITE MmbiEvtIoWrite;
+
+EXTERN_C_END

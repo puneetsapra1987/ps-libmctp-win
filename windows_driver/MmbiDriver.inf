@@ -1,0 +1,74 @@
+;
+; MmbiDriver.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider=%ManufacturerName%
+CatalogFile=MmbiDriver.cat
+DriverVer=
+PnpLockDown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+MmbiDriver_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+MmbiDriver.sys  = 1,,
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1
+
+; ================= Class section =====================
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+%MmbiDriver.DeviceDesc%=MmbiDriver_Device, Root\MmbiDriver
+
+[MmbiDriver_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+MmbiDriver.sys
+
+;-------------- Service installation
+[MmbiDriver_Device.NT.Services]
+AddService = MmbiDriver,%SPSVCINST_ASSOCSERVICE%, MmbiDriver_Service_Inst
+
+[MmbiDriver_Service_Inst]
+DisplayName    = %MmbiDriver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\MmbiDriver.sys
+
+;
+;--- MmbiDriver_Device Coinstaller installation ------
+;
+
+[MmbiDriver_Device.NT.CoInstallers]
+AddReg=MmbiDriver_Device_CoInstaller_AddReg
+CopyFiles=MmbiDriver_Device_CoInstaller_CopyFiles
+
+[MmbiDriver_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+
+[MmbiDriver_Device_CoInstaller_CopyFiles]
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+
+[MmbiDriver_Device.NT.Wdf]
+KmdfService =  MmbiDriver, MmbiDriver_wdfsect
+[MmbiDriver_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Simulated"
+DiskName = "MmbiDriver Installation Disk"
+MmbiDriver.DeviceDesc = "MMBI Simulated Device"
+MmbiDriver.SVCDESC = "MMBI Driver Service"

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\x64\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\bmc_transport.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\host_transport.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_bridge.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_cmds.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_core.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_eid.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_file_transfer.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_mmbi.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_mmbi_bmc.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_mmbi_full_duplex.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_mmbi_host.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_mmbi_log.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_seq.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\Debug\test_stress_mmbi.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\AG_2026\New\libmctp-mmbi\build\x64\Debug\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

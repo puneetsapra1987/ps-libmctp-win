@@ -1,0 +1,10 @@
+^E:\AG_2026\NEW\LIBMCTP-MMBI\BUILD\CMAKEFILES\3FCFC573D0A28024B84D09BC51EF5711\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/AG_2026/New/libmctp-mmbi -BE:/AG_2026/New/libmctp-mmbi/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/AG_2026/New/libmctp-mmbi/build/libmctp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
